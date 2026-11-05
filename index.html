@@ -116,11 +116,10 @@ td p { margin: 4px 0 0; font-size: 14px; }
 <ul>
 <li>Las <strong>aplicaciones que eliges en una petición de iconos</strong>, que nos envías tú por correo y que quedan registradas junto a un identificador aleatorio de instalación.</li>
 <li>Una <strong>comprobación con Google Play</strong> de que la aplicación es la original y de que la compraste, al abrirla y al pedir iconos.</li>
-<li><strong>Estadísticas de uso</strong> recogidas por Google Analytics for Firebase, sin tu nombre ni tu correo.</li>
 <li>Un <strong>identificador de notificaciones</strong>, para avisarte de novedades de la app.</li>
 <li>Las <strong>peticiones de descarga</strong> normales al ver el catálogo de fondos de pantalla.</li>
 </ul>
-<p>No hay anuncios, no usamos el identificador de publicidad de Android y no vendemos nada a nadie.</p>
+<p>No hay anuncios, no hay analítica, no usamos el identificador de publicidad de Android y no vendemos nada a nadie.</p>
 </div>
 
 <h2>2. Datos que salen de tu dispositivo</h2>
@@ -153,11 +152,6 @@ td p { margin: 4px 0 0; font-size: 14px; }
 <td>Pasa por el mismo servidor de <strong>Supabase</strong> y lo resuelve <strong>Google Play</strong>. Solo se usa para saber si la aplicación se compró en Google Play. Si no hay conexión o el servidor no responde, la aplicación sigue funcionando. El resultado se guarda cifrado en tu teléfono.</td>
 </tr>
 <tr>
-<td><strong>Estadísticas de uso</strong>
-<p>Datos que recoge automáticamente Google Analytics for Firebase: un identificador de instancia de la app, la primera apertura, las sesiones, las pantallas que abres, las actualizaciones de la app, el modelo del teléfono, la versión de Android, el idioma y el país aproximado (calculado por Google a partir de la conexión).</p></td>
-<td>Los procesa <strong>Google Analytics for Firebase</strong> y nosotros solo vemos <strong>totales agregados</strong>, para saber qué versiones y funciones se usan y mejorar la aplicación. La app <strong>no usa el identificador de publicidad</strong> de Android, no envía tus datos personales a Analytics y no usa estos datos para publicidad.</td>
-</tr>
-<tr>
 <td><strong>Token de notificaciones</strong>
 <p>Generado automáticamente por Firebase. No contiene tu nombre, correo ni ningún dato de tu cuenta de Google.</p></td>
 <td>Lo usa <strong>Google Firebase Cloud Messaging</strong> para hacer llegar a tu dispositivo las notificaciones con novedades de GlassWave. Puedes desactivarlas en los ajustes de GlassWave o desde los ajustes de Android.</td>
@@ -188,7 +182,7 @@ td p { margin: 4px 0 0; font-size: 14px; }
 
 <h2>4. Permisos que solicita la aplicación</h2>
 <ul>
-<li><strong>Internet y estado de la red:</strong> para descargar el catálogo de fondos, comprobar y registrar tus peticiones, enviar las estadísticas y recibir notificaciones.</li>
+<li><strong>Internet y estado de la red:</strong> para descargar el catálogo de fondos, comprobar y registrar tus peticiones y recibir notificaciones.</li>
 <li><strong>Notificaciones:</strong> para enviarte avisos sobre novedades de GlassWave. Es opcional.</li>
 <li><strong>Consultar las aplicaciones instaladas:</strong> para el pack de iconos y las peticiones de iconos, como se explica en la sección 3. También para detectar tu launcher y si tienes KWGT instalado.</li>
 <li><strong>Establecer fondo de pantalla:</strong> para aplicar el fondo que eliges del catálogo.</li>
@@ -199,6 +193,7 @@ td p { margin: 4px 0 0; font-size: 14px; }
 <h2>5. Lo que la aplicación NO hace</h2>
 <ul>
 <li>No muestra publicidad.</li>
+<li>No incluye ningún sistema de <strong>analítica, seguimiento ni informes de fallos</strong>.</li>
 <li>No usa el identificador de publicidad de Android.</li>
 <li>No requiere crear una cuenta.</li>
 <li>No vende ni comparte tus datos con terceros para sus propios fines.</li>
@@ -226,7 +221,7 @@ td p { margin: 4px 0 0; font-size: 14px; }
 <ul>
 <li><strong>Google Play:</strong> distribución de la aplicación, gestión de las compras y comprobación de que la compraste.</li>
 <li><strong>Google Play Integrity:</strong> certificado que confirma que la aplicación es la original de Google Play.</li>
-<li><strong>Google Firebase</strong> (Cloud Firestore, Cloud Messaging, App Check y Google Analytics for Firebase): registro de las peticiones de iconos, envío de notificaciones, novedades de cada versión, protección del acceso a esos datos y estadísticas de uso.</li>
+<li><strong>Google Firebase</strong> (Cloud Firestore, Cloud Messaging y App Check): registro de las peticiones de iconos, envío de notificaciones, novedades de cada versión y protección del acceso a esos datos.</li>
 <li><strong>Supabase:</strong> alojamiento del servidor que comprueba las peticiones de iconos y la compra, y del registro de peticiones.</li>
 <li><strong>GitHub</strong>, <strong>ImgBB</strong> y <strong>Cloudinary:</strong> alojamiento de la lista y las imágenes del catálogo de fondos, del carrusel de otras apps y de la configuración de la app.</li>
 <li><strong>Gmail</strong> u otro servicio de correo que uses: entrega de los correos de petición de iconos.</li>
@@ -237,9 +232,7 @@ td p { margin: 4px 0 0; font-size: 14px; }
 <p>Lo descrito en la sección 3 vive en el almacenamiento privado de la aplicación en tu teléfono. Fuera de él solo se conservan:</p>
 <ul>
 <li>El <strong>registro de iconos pedidos</strong> en Firebase y en Supabase, mientras sigas usando las peticiones o hasta que pidas borrarlo.</li>
-<li>Los <strong>correos de petición</strong> que nos envías, mientras sean necesarios para diseñar los iconos y responderte.</li>
-<li>Las <strong>estadísticas de uso</strong>, que Google Analytics conserva según su configuración de conservación de datos y luego elimina.</li>
-</ul>
+<li>Los <strong>correos de petición</strong> que nos envías, mientras sean necesarios para diseñar los iconos y responderte.</li></ul>
 <div class="info-box">
 <p><strong>Cómo borrarlo todo</strong></p>
 <p>Al <strong>desinstalar la aplicación</strong>, o desde Ajustes de Android → Aplicaciones → GlassWave → Almacenamiento → <em>Borrar datos</em>, se eliminan de forma permanente de tu dispositivo tus ajustes, tus compras guardadas, el historial de notificaciones, el identificador de instalación y el token de notificaciones. Las peticiones premium que no hayas usado se pierden al borrar los datos.</p>
